@@ -1,0 +1,27 @@
+# te-nanopore-tools
+A cache of scripts and data for manipulating nanopore/nanopolish output aimed at studying TEs. See individual folders for further information.
+
+
+## Parsing scripts
+
+| script            | description |
+|-------------------|-------------|
+| segmeth.py        | Given a list of segments and one or more nanopore .bams, each paired to a tabix-indexed nanopolish output, compiles information on methylation calls for each segment. Output is used as input to other plotting tools |
+| segmeth_hap.py    | Similar to segmeth.py but takes phased .bams as input and outputs allele-specific information |
+| wgmeth_hap_dss.py | Generates output compatible with DSS for calling DMRs |
+| wgmeth.py         | Given one or more nanopore .bams, each paired to a tabix-indexed nanopolish output, generate binned methylation data across the whole genome. Used as input to plotting scripts. |
+| diffseg.py        | Adds columns for methylation fraction given output from segmeth.py |
+
+
+## Plotting scripts
+
+| script                | description |
+|-----------------------|-------------|
+| composite_meth.py     | Plots multiple CpG methylation profiles against a reference TE, generally a consensus TE. |
+| plotmeth_ref_hap.py   | Plots allele-specific CpG methylation profiles given a phased .bam, tabix-indexed nanopolish call-methylation output, and an interval of interest |
+| plotmeth_ref_multi.py | Plots one or more CpG metylation profiles given one or more phased .bams, each paired to a tabix-indexed nanopolish output, and an interval of interest |
+| plotmeth_wg.py        | Plots the whole-genome methylation profile given output from wgmeth.py (see parsing tools) |
+| segplot.py            | Makes strip plots or violin plots for specified samples given output from segmeth.py (see parsing tools) |
+
+
+Citation: Nanopore sequencing enables comprehensive transposable element epigenomic profiling. Adam D Ewing, Nathan Smits, Francisco J Sanchez-Luque, Jamila Faivre, Paul M Brennan, Seth W Cheetham, Geoffrey J Faulkner. bioRxiv 2020.05.24.113068; doi: https://doi.org/10.1101/2020.05.24.113068
