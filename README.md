@@ -1,6 +1,9 @@
 # te-nanopore-tools
 A cache of scripts and data for manipulating nanopore/nanopolish output aimed at studying TEs. See individual folders for further information.
 
+### If possible I would suggest using TMNT instead of these scripts: https://github.com/adamewing/tmnt
+TMNT includes updates and improvements to these tools, supports additional formats and base modfications, and is a more unified framework for exploring nanopore-based methylation data.
+
 
 ## Parsing scripts
 
